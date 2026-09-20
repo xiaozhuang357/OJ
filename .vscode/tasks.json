@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译并运行当前 Java 题目",
+            "type": "shell",
+            "command": "javac -encoding UTF-8 Main.java && java Main",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "windows": {
+                "command": "javac -encoding UTF-8 Main.java; if ($LASTEXITCODE -eq 0) { java Main }"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "focus": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
